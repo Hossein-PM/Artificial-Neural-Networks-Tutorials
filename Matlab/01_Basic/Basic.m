@@ -1,17 +1,17 @@
-% help
+%% help
 help
-clc
+% clc
 help plot
 
-% who & whos
-clc
+%% who & whos
+%clc
 a= 5; b= 6;
 who
 clc
 whos
 
-% format long vs short
-clc
+%% format long vs short
+%clc
 pi
 format short
 c= sin(pi/4)
@@ -19,28 +19,28 @@ format long
 c= sin(pi/4)
 format short
 
-% ellipsis
-clc
+%% ellipsis
+%clc
 2+ 3 *(3-5)^2 ...
     +200
 
 % round
-clc
+%clc
 round(pi)
 round(22.9999)
 
 % random
-clc
+%clc
 rand
-clc
+%clc
 low= 5;
 high= 22;
 rand*(high- low)+ low
-clc
+%clc
 round(rand*(high- low)+ low)
 
-% figure
-clc
+%% figure
+%clc
 figure
 figure
 figure
