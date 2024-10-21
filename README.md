@@ -17,8 +17,9 @@ This repository covers the basics of Artificial Neural Networks (ANNs) using MAT
 
 📂 What’s Inside?
 
+Python/: Core Python scripts for ANN fundamentals.
+
 MATLAB/: Basic ANN concepts and implementation.
-Python/: Core Python scripts for ANN fundamentals (no advanced libraries).
 
 🤝 How to Get Started?
 
