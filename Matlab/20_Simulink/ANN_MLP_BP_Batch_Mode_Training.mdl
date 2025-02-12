@@ -1,0 +1,2906 @@
+Model {
+  Name			  "ANN_MLP_BP_Batch_Mode_Training"
+  Version		  6.0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.491"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Apr 13 13:34:40 2010"
+  Creator		  "marcelo"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Marcelo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Apr 18 01:22:38 2012"
+  ModelVersionFormat	  "1.%<AutoIncrement:491>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.0.4"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.0.4"
+	  StartTime		  "0.0"
+	  StopTime		  "4000"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.0.4"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "InitFltsAndDblsToZero"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  ConditionalExecOptimization "on_for_testing"
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.0.4"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.0.4"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "32-bit Generic"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.0.4"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonFinite"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      ExtraOptions	      "-aInitFltsAndDblsToZero=1 "
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Bias
+      Bias		      "0"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      InitialCondition
+      Value		      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Selector
+      InputType		      "Vector"
+      IndexMode		      "One-based"
+      ElementSrc	      "Internal"
+      Elements		      "1"
+      RowSrc		      "Internal"
+      Rows		      "1"
+      ColumnSrc		      "Internal"
+      Columns		      "1"
+      InputPortWidth	      "-1"
+      IndexIsStartValue	      off
+      OutputPortSize	      "1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ANN_MLP_BP_Batch_Mode_Training"
+    Location		    [2, 74, 1340, 728]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "124"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Sum
+      Name		      "Add"
+      Ports		      [2, 1]
+      Position		      [705, 360, 735, 390]
+      Orientation	      "left"
+      IconShape		      "round"
+      Inputs		      "-+|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Backpropagation Algorithm"
+      Ports		      [4, 2]
+      Position		      [355, 250, 520, 395]
+      Orientation	      "left"
+      BackgroundColor	      "gray"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskType		      "Backpropagation Algorithm"
+      MaskDescription	      "Backpropagation Algorithm\n\nProf. Marcelo A. C"
+". Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskHelp		      "Backpropagation Algorithm\n\nProf. Marcelo A. C"
+". Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskPromptString	      "mu:|alpha:|training size:|Number of the inputs:"
+"|Number of hidden neurons:|Number of output neurons:"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on,on,on"
+      MaskCallbackString      "|||||"
+      MaskEnableString	      "on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on"
+      MaskVarAliasString      ",,,,,"
+      MaskVariables	      "mu=@1;alpha=@2;N=@3;p=@4;H=@5;m=@6;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0.75|0.001|4|2|4|1"
+      MaskTabNameString	      ",,,,,"
+      System {
+	Name			"Backpropagation Algorithm"
+	Location		[2, 82, 1270, 696]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "[bias|X(n)]"
+	  Position		  [540, 258, 570, 272]
+	  Orientation		  "left"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "[bias|X(n)]"
+	    PropagatedSignals	    "X"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "[bias|Z(n)]"
+	  Position		  [1030, 178, 1060, 192]
+	  Orientation		  "left"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "[bias|Z(n)]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y(n)"
+	  Position		  [1105, 138, 1135, 152]
+	  Orientation		  "left"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "E(n)"
+	  Position		  [865, 218, 895, 232]
+	  Orientation		  "left"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "E(n)"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Hidden Layer"
+	  Ports			  [4, 1]
+	  Position		  [340, 167, 465, 323]
+	  Orientation		  "left"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Hidden Layer"
+	    Location		    [2, 74, 1356, 744]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Wy(n)"
+	      Position		      [1125, 150, 1155, 165]
+	      Orientation	      "down"
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Gy(n)"
+	      Position		      [1150, 323, 1180, 337]
+	      Orientation	      "left"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "[bias|X(n)]"
+	      Position		      [840, 468, 870, 482]
+	      Orientation	      "left"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "[bias|Z(n)]"
+	      Position		      [1280, 438, 1310, 452]
+	      Orientation	      "left"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	      Port {
+		PortNumber		1
+		Name			"[bias|Z(n)]"
+		PropagatedSignals	"[bias|Z(n)]"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      Ports		      [3, 1]
+	      Position		      [230, 161, 265, 389]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "+++"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"Wx(n+1)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Bias
+	      Name		      "Bias2"
+	      Position		      [1065, 430, 1105, 460]
+	      Orientation	      "left"
+	      Bias		      "1"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"1-[bias|Z(n)]"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      Position		      [355, 321, 420, 379]
+	      Orientation	      "left"
+	      Gain		      "mu/N"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"DWx(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      Position		      [295, 253, 355, 297]
+	      Orientation	      "left"
+	      Gain		      "alpha"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"Wx(n-1)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain4"
+	      Position		      [1165, 430, 1195, 460]
+	      Orientation	      "left"
+	      Gain		      "-1"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"-[bias|Z(n)]"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      InitialCondition
+	      Name		      "IC"
+	      Position		      [70, 253, 110, 297]
+	      Orientation	      "left"
+	      Value		      "rand(H,p+1)"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Integer Delay"
+	      Ports		      [1, 1]
+	      Position		      [395, 258, 430, 292]
+	      Orientation	      "left"
+	      UserDataPersistent      on
+	      SourceBlock	      "simulink/Discrete/Integer Delay"
+	      SourceType	      "Integer Delay"
+	      vinit		      "0.0"
+	      samptime		      "-1"
+	      NumDelays		      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Integer Delay1"
+	      Ports		      [1, 1]
+	      Position		      [155, 258, 190, 292]
+	      Orientation	      "left"
+	      UserDataPersistent      on
+	      SourceBlock	      "simulink/Discrete/Integer Delay"
+	      SourceType	      "Integer Delay"
+	      vinit		      "0.0"
+	      samptime		      "-1"
+	      NumDelays		      "1"
+	      Port {
+		PortNumber		1
+		Name			"Wx(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [1, 1]
+	      Position		      [765, 460, 795, 490]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Operator		      "transpose"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction1"
+	      Ports		      [1, 1]
+	      Position		      [1125, 195, 1155, 225]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      Operator		      "transpose"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      Port {
+		PortNumber		1
+		Name			"Wy(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [775, 294, 800, 361]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"Gx(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Produto2"
+	      Ports		      [2, 1]
+	      Position		      [505, 309, 610, 391]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "**"
+	      Multiplication	      "Matrix(*)"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Produto3"
+	      Ports		      [2, 1]
+	      Position		      [925, 270, 1005, 350]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "**"
+	      Multiplication	      "Matrix(*)"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Produto5"
+	      Ports		      [2, 1]
+	      Position		      [940, 384, 985, 466]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "**"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"[bias|Z(n)](1-[bias|Z(n)])"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "Selector"
+	      Ports		      [1, 1]
+	      Position		      [655, 309, 715, 351]
+	      Orientation	      "left"
+	      InputType		      "Matrix"
+	      Rows		      "[2:H+1]"
+	      Columns		      "-1"
+	      InputPortWidth	      "3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Wx(n+1)"
+	      Position		      [15, 268, 45, 282]
+	      Orientation	      "left"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Line {
+	      Name		      "Wy(n)"
+	      Labels		      [2, 0]
+	      SrcBlock		      "Math\nFunction1"
+	      SrcPort		      1
+	      Points		      [0, 60]
+	      DstBlock		      "Produto3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Produto3"
+	      SrcPort		      1
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Wy(n)"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gy(n)"
+	      SrcPort		      1
+	      DstBlock		      "Produto3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "[bias|X(n)]"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "[bias|Z(n)]"
+	      Labels		      [1, 1]
+	      SrcBlock		      "[bias|Z(n)]"
+	      SrcPort		      1
+	      Points		      [-60, 0]
+	      Branch {
+		Labels			[-1, 0]
+		Points			[0, -40]
+		DstBlock		"Produto5"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Gain4"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "-[bias|Z(n)]"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain4"
+	      SrcPort		      1
+	      DstBlock		      "Bias2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "1-[bias|Z(n)]"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bias2"
+	      SrcPort		      1
+	      DstBlock		      "Produto5"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "[bias|Z(n)](1-[bias|Z(n)])"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Produto5"
+	      SrcPort		      1
+	      Points		      [-110, 0; 0, -80]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "Gx(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      Points		      [-120, 0; 0, -105]
+	      DstBlock		      "Produto2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Selector"
+	      SrcPort		      1
+	      DstBlock		      "Produto2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "DWx(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Integer Delay"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Wx(n-1)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Produto2"
+	      SrcPort		      1
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Wx(n+1)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Integer Delay1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Wx(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Integer Delay1"
+	      SrcPort		      1
+	      DstBlock		      "IC"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "IC"
+	      SrcPort		      1
+	      Points		      [-5, 0]
+	      Branch {
+		DstBlock		"Wx(n+1)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -145; 340, 0; 0, 70]
+		Branch {
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [85, 0; 0, 75]
+		  DstBlock		  "Integer Delay"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Output Layer"
+	  Ports			  [3, 3]
+	  Position		  [610, 123, 765, 247]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Wy(n+1)"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "Wy(n)"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "Gy(n)"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	  System {
+	    Name		    "Output Layer"
+	    Location		    [2, 82, 1356, 716]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y(n)"
+	      Position		      [1250, 183, 1280, 197]
+	      Orientation	      "left"
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	      Port {
+		PortNumber		1
+		Name			"Y(n)"
+		PropagatedSignals	"1/(1+exp(-x))"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "[bias|Z(n)]"
+	      Position		      [1025, 343, 1055, 357]
+	      Orientation	      "left"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "E(n)"
+	      Position		      [1080, 223, 1110, 237]
+	      Orientation	      "left"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	      Port {
+		PortNumber		1
+		Name			"E(n)"
+		PropagatedSignals	"E(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      Ports		      [3, 1]
+	      Position		      [265, 141, 300, 369]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "+++"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Bias
+	      Name		      "Bias"
+	      Position		      [1045, 175, 1085, 205]
+	      Orientation	      "left"
+	      Bias		      "1"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"1-Y(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [1145, 175, 1175, 205]
+	      Orientation	      "left"
+	      Gain		      "-1"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"-Y(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      Position		      [350, 301, 415, 359]
+	      Orientation	      "left"
+	      Gain		      "mu/N"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"DWy(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      Position		      [350, 233, 410, 277]
+	      Orientation	      "left"
+	      Gain		      "alpha"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"Wy(n-1)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      InitialCondition
+	      Name		      "IC"
+	      Position		      [135, 233, 175, 277]
+	      Orientation	      "left"
+	      Value		      "rand(m,H+1)"
+	    }
+	    Block {
+	      BlockType		      InitialCondition
+	      Name		      "IC1"
+	      Position		      [480, 308, 515, 352]
+	      Orientation	      "left"
+	      Value		      "rand(m,H+1)"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Integer Delay"
+	      Ports		      [1, 1]
+	      Position		      [480, 238, 515, 272]
+	      Orientation	      "left"
+	      UserDataPersistent      on
+	      SourceBlock	      "simulink/Discrete/Integer Delay"
+	      SourceType	      "Integer Delay"
+	      vinit		      "0.0"
+	      samptime		      "-1"
+	      NumDelays		      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Integer Delay1"
+	      Ports		      [1, 1]
+	      Position		      [205, 238, 240, 272]
+	      Orientation	      "left"
+	      UserDataPersistent      on
+	      SourceBlock	      "simulink/Discrete/Integer Delay"
+	      SourceType	      "Integer Delay"
+	      vinit		      "0.0"
+	      samptime		      "-1"
+	      NumDelays		      "1"
+	      Port {
+		PortNumber		1
+		Name			"Wy(n+1)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [1, 1]
+	      Position		      [830, 335, 860, 365]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Operator		      "transpose"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Produto1"
+	      Ports		      [2, 1]
+	      Position		      [765, 139, 795, 261]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "**"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Produto2"
+	      Ports		      [2, 1]
+	      Position		      [595, 290, 675, 370]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "**"
+	      Multiplication	      "Matrix(*)"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Produto3"
+	      Ports		      [2, 1]
+	      Position		      [920, 129, 965, 211]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Inputs		      "**"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"Y(n)(1-Y(n))"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Wy(n+1)"
+	      Position		      [65, 248, 95, 262]
+	      Orientation	      "left"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Wy(n)"
+	      Position		      [435, 118, 465, 132]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Gy(n)"
+	      Position		      [635, 198, 665, 212]
+	      Orientation	      "left"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "[bias|Z(n)]"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      DstBlock		      "Produto2"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "DWy(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Integer Delay"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Integer Delay1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Wy(n-1)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "Wy(n+1)"
+	      Labels		      [0, 0; -1, 1]
+	      SrcBlock		      "Integer Delay1"
+	      SrcPort		      1
+	      DstBlock		      "IC"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "IC"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"Wy(n+1)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -160; 230, 0; 0, 30]
+		Branch {
+		  Points		  [0, 55]
+		  Branch {
+		    DstBlock		    "Add"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [210, 0; 0, 75]
+		    DstBlock		    "Integer Delay"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Wy(n)"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Produto2"
+	      SrcPort		      1
+	      DstBlock		      "IC1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "IC1"
+	      SrcPort		      1
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "E(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "E(n)"
+	      SrcPort		      1
+	      DstBlock		      "Produto1"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "-Y(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Bias"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "1-Y(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bias"
+	      SrcPort		      1
+	      DstBlock		      "Produto3"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "Y(n)(1-Y(n))"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Produto3"
+	      SrcPort		      1
+	      DstBlock		      "Produto1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Produto1"
+	      SrcPort		      1
+	      Points		      [-35, 0]
+	      Branch {
+		Points			[0, 105]
+		DstBlock		"Produto2"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Gy(n)"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "Y(n)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Y(n)"
+	      SrcPort		      1
+	      Points		      [-40, 0]
+	      Branch {
+		DstBlock		"Gain"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -40]
+		DstBlock		"Produto3"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Wy(n+1)"
+	  Position		  [220, 138, 250, 152]
+	  Orientation		  "left"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Wx(n+1)"
+	  Position		  [220, 238, 250, 252]
+	  Orientation		  "left"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Line {
+	  Name			  "Wy(n+1)"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Output Layer"
+	  SrcPort		  1
+	  DstBlock		  "Wy(n+1)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "[bias|Z(n)]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "[bias|Z(n)]"
+	  SrcPort		  1
+	  Points		  [-85, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "Output Layer"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 120]
+	    DstBlock		    "Hidden Layer"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  Name			  "E(n)"
+	  Labels		  [0, 0]
+	  SrcBlock		  "E(n)"
+	  SrcPort		  1
+	  DstBlock		  "Output Layer"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "Wy(n)"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Output Layer"
+	  SrcPort		  2
+	  DstBlock		  "Hidden Layer"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Gy(n)"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Output Layer"
+	  SrcPort		  3
+	  DstBlock		  "Hidden Layer"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "[bias|X(n)]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "[bias|X(n)]"
+	  SrcPort		  1
+	  DstBlock		  "Hidden Layer"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Hidden Layer"
+	  SrcPort		  1
+	  DstBlock		  "Wx(n+1)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Y(n)"
+	  SrcPort		  1
+	  DstBlock		  "Output Layer"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Input"
+      Position		      [25, 115, 135, 185]
+      Value		      "[0 0 1 1;0 1 0 1]"
+      VectorParams1D	      off
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SampleTime	      "1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "MLP - 2 Layers"
+      Ports		      [3, 3]
+      Position		      [365, 138, 515, 222]
+      BackgroundColor	      "lightBlue"
+      FontName		      "Arial"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskType		      "Multilayer Perceptron (MLP) - 2 Layers"
+      MaskDescription	      "Multilayer Perceptron (MLP) - 2 Layers\n\nProf."
+" Marcelo Augusto Costa Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskHelp		      "Multilayer Perceptron (MLP) - 2 Layers\n\nProf."
+" Marcelo Augusto Costa Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskPromptString	      "training size:|Bias value:|Number of the inputs"
+":|Number of hidden neurons:|Number of output neurons:"
+      MaskStyleString	      "edit,edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on,on"
+      MaskCallbackString      "||||"
+      MaskEnableString	      "on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on"
+      MaskVarAliasString      ",,,,"
+      MaskVariables	      "N=@1;valorLimiar=@2;p=@3;H=@4;m=@5;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "4|-1|2|4|1"
+      MaskTabNameString	      ",,,,"
+      System {
+	Name			"MLP - 2 Layers"
+	Location		[2, 82, 1270, 696]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X(n)"
+	  Position		  [20, 208, 50, 222]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Wx(n+1)"
+	  Position		  [165, 38, 195, 52]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Wy(n+1)"
+	  Position		  [520, 38, 550, 52]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [20, 81, 135, 109]
+	  Value			  "valorLimiar*ones(1,N)"
+	  VectorParams1D	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Matrix\nConcatenation"
+	  Ports			  [2, 1]
+	  Position		  [155, 184, 210, 226]
+	  SourceBlock		  "simulink/Math\nOperations/Matrix\nConcatena"
+"tion"
+	  SourceType		  "Matrix Concatenation"
+	  numInports		  "2"
+	  catMethod		  "Vertical"
+	  Port {
+	    PortNumber		    1
+	    Name		    "X"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Matrix\nConcatenation1"
+	  Ports			  [2, 1]
+	  Position		  [645, 164, 700, 206]
+	  SourceBlock		  "simulink/Math\nOperations/Matrix\nConcatena"
+"tion"
+	  SourceType		  "Matrix Concatenation"
+	  numInports		  "2"
+	  catMethod		  "Vertical"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Matrix Multiply"
+	  Ports			  [2, 1]
+	  Position		  [295, 176, 350, 214]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "V(n)"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Matrix Multiply1"
+	  Ports			  [2, 1]
+	  Position		  [750, 156, 805, 194]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "B(n)"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sigmoid"
+	  Ports			  [1, 1]
+	  Position		  [500, 173, 565, 217]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "Sigmoid Function"
+	  MaskDescription	  "Sigmoid Function.\n\n1/(1+exp(-x))\n\nProf."
+" Marcelo Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+	  MaskHelp		  "Sigmoid Function.\n\n1/(1+exp(-x))\n\nProf."
+" Marcelo Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+	  MaskDisplay		  "plot([-8:.1:8],(1-exp(-1*[-8:.1:8]))./(1+ex"
+"p(-1*[-8:.1:8])))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Z(n)"
+	    PropagatedSignals	    "1/(1+exp(-x))"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	  System {
+	    Name		    "Sigmoid"
+	    Location		    [2, 82, 1270, 696]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [130, 173, 160, 187]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	      Port {
+		PortNumber		1
+		Name			"x"
+		PropagatedSignals	"V(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Bias
+	      Name		      "Bias"
+	      Position		      [455, 165, 495, 195]
+	      Bias		      "1"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"1+exp(-x)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [1, 1]
+	      Position		      [320, 165, 350, 195]
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      Port {
+		PortNumber		1
+		Name			"exp(-x)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction1"
+	      Ports		      [1, 1]
+	      Position		      [585, 165, 615, 195]
+	      Operator		      "reciprocal"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      Port {
+		PortNumber		1
+		Name			"1/(1+exp(-x))"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "a"
+	      Position		      [240, 165, 270, 195]
+	      Gain		      "-1"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"-x"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [760, 173, 790, 187]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Line {
+	      Name		      "x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "a"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "-x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "a"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "exp(-x)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      DstBlock		      "Bias"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "1+exp(-x)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bias"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "1/(1+exp(-x))"
+	      Labels		      [1, 1]
+	      SrcBlock		      "Math\nFunction1"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sigmoid1"
+	  Ports			  [1, 1]
+	  Position		  [950, 153, 1015, 197]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "Sigmoid Function"
+	  MaskDescription	  "Sigmoid Function.\n\n1/(1+exp(-x))\n\nProf."
+" Marcelo Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+	  MaskHelp		  "Sigmoid Function.\n\n1/(1+exp(-x))\n\nProf."
+" Marcelo Fernandes\nDCA - CT - UFRN\nmfernandes@dca.ufrn.br"
+	  MaskDisplay		  "plot([-8:.1:8],(1-exp(-1*[-8:.1:8]))./(1+ex"
+"p(-1*[-8:.1:8])))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Sigmoid1"
+	    Location		    [2, 82, 1270, 696]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [130, 173, 160, 187]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      LatchInput	      off
+	      Port {
+		PortNumber		1
+		Name			"x"
+		PropagatedSignals	"B(n)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Bias
+	      Name		      "Bias"
+	      Position		      [455, 165, 495, 195]
+	      Bias		      "1"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"1+exp(-x)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [1, 1]
+	      Position		      [320, 165, 350, 195]
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      Port {
+		PortNumber		1
+		Name			"exp(-x)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction1"
+	      Ports		      [1, 1]
+	      Position		      [585, 165, 615, 195]
+	      Operator		      "reciprocal"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      Port {
+		PortNumber		1
+		Name			"1/(1+exp(-x))"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "a"
+	      Position		      [240, 165, 270, 195]
+	      Gain		      "-1"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "fixdt(1,16,0)"
+	      ParameterScaling	      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"-x"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+		ShowSigGenPortName	on
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [760, 173, 790, 187]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	    }
+	    Line {
+	      Name		      "1/(1+exp(-x))"
+	      Labels		      [1, 1]
+	      SrcBlock		      "Math\nFunction1"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "1+exp(-x)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bias"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "exp(-x)"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      DstBlock		      "Bias"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "-x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "a"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "a"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Y(n)"
+	  Position		  [1070, 168, 1100, 182]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "[bias|Z(n)]"
+	  Position		  [745, 278, 775, 292]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "[bias|X(n)]"
+	  Position		  [410, 298, 440, 312]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [0, 30]
+	  Branch {
+	    DstBlock		    "Matrix\nConcatenation"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [475, 0; 0, 50]
+	    DstBlock		    "Matrix\nConcatenation1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "X"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Matrix\nConcatenation"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "Matrix Multiply"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 100]
+	    DstBlock		    "[bias|X(n)]"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "V(n)"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Matrix Multiply"
+	  SrcPort		  1
+	  DstBlock		  "Sigmoid"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X(n)"
+	  SrcPort		  1
+	  DstBlock		  "Matrix\nConcatenation"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Wx(n+1)"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  DstBlock		  "Matrix Multiply"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "B(n)"
+	  Labels		  [0, 0; 1, 0]
+	  SrcBlock		  "Matrix Multiply1"
+	  SrcPort		  1
+	  DstBlock		  "Sigmoid1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Z(n)"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Sigmoid"
+	  SrcPort		  1
+	  DstBlock		  "Matrix\nConcatenation1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Matrix\nConcatenation1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Matrix Multiply1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 100]
+	    DstBlock		    "[bias|Z(n)]"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Wy(n+1)"
+	  SrcPort		  1
+	  Points		  [180, 0]
+	  DstBlock		  "Matrix Multiply1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sigmoid1"
+	  SrcPort		  1
+	  DstBlock		  "Y(n)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "MLP desired output"
+      Ports		      [1]
+      Position		      [315, 470, 655, 500]
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "MSE"
+      Ports		      [1, 1]
+      Position		      [665, 435, 745, 475]
+      NamePlacement	      "alternate"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskType		      "MSE"
+      MaskDescription	      "MSE\n\nProf. Marcelo Augusto Costa Fernandes\nD"
+"CA - CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskHelp		      "MSE\n\nProf. Marcelo Augusto Costa Fernandes\nD"
+"CA - CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskPromptString	      "training size:|Number of output neurons:"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskVarAliasString      ","
+      MaskVariables	      "N=@1;m=@2;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "4|1"
+      MaskTabNameString	      ","
+      System {
+	Name			"MSE"
+	Location		[572, 427, 1087, 559]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "E(n)"
+	  Position		  [25, 83, 55, 97]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [1, 1]
+	  Position		  [340, 55, 370, 85]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "1"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [135, 41, 190, 59]
+	  ShowName		  off
+	  Value			  "ones(1,m)"
+	  VectorParams1D	  off
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [395, 52, 440, 88]
+	  ShowName		  off
+	  Gain			  "1/N"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "fixdt(1,16,0)"
+	  ParameterScaling	  "[]"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Math\nFunction"
+	  Ports			  [1, 1]
+	  Position		  [90, 75, 120, 105]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Operator		  "magnitude^2"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Matrix Multiply3"
+	  Ports			  [2, 1]
+	  Position		  [235, 30, 290, 110]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "fixdt(1,16,0)"
+	  OutScaling		  "[]"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "MSE"
+	  Position		  [465, 63, 495, 77]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "Matrix Multiply3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Math\nFunction"
+	  SrcPort		  1
+	  DstBlock		  "Matrix Multiply3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Matrix Multiply3"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "E(n)"
+	  SrcPort		  1
+	  DstBlock		  "Math\nFunction"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "MSE"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "MSE Value"
+      Ports		      [1]
+      Position		      [825, 440, 920, 470]
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "MSE View"
+      Ports		      [1]
+      Position		      [825, 384, 855, 416]
+      Location		      [913, 124, 1357, 418]
+      Open		      on
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "5000000"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "desired output value"
+      Position		      [25, 222, 130, 258]
+      Value		      "[0 1 1 0]"
+      VectorParams1D	      off
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SampleTime	      "1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "outpu MLP"
+      Ports		      [1]
+      Position		      [745, 290, 1085, 320]
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "shuffle"
+      Ports		      [2, 2]
+      Position		      [185, 135, 265, 195]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskType		      "Shuffle"
+      MaskDescription	      "Shuffle\n\nProf. Marcelo A. C. Fernandes\nDCA -"
+" CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskHelp		      "Shuffle\n\nProf. Marcelo A. C. Fernandes\nDCA -"
+" CT - UFRN\nmfernandes@dca.ufrn.br"
+      MaskPromptString	      "training size:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "N=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "4"
+      System {
+	Name			"shuffle"
+	Location		[563, 116, 965, 355]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X(n)"
+	  Position		  [145, 28, 175, 42]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "D(n)"
+	  Position		  [155, 113, 185, 127]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground"
+	  Position		  [15, 55, 35, 75]
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "MATLAB Fcn"
+	  Position		  [60, 50, 120, 80]
+	  MATLABFcn		  "randperm(N)"
+	  OutputDimensions	  "N"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  Ports			  [2, 1]
+	  Position		  [200, 20, 245, 80]
+	  InputType		  "Matrix"
+	  Elements		  "[1 3]"
+	  Rows			  "-1"
+	  ColumnSrc		  "External"
+	  InputPortWidth	  "3"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  Ports			  [2, 1]
+	  Position		  [210, 105, 255, 165]
+	  InputType		  "Matrix"
+	  Elements		  "[1 3]"
+	  Rows			  "-1"
+	  ColumnSrc		  "External"
+	  InputPortWidth	  "3"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X(n)_"
+	  Position		  [265, 43, 295, 57]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "D(n)]_"
+	  Position		  [285, 128, 315, 142]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "MATLAB Fcn"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Selector"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "Selector1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Ground"
+	  SrcPort		  1
+	  DstBlock		  "MATLAB Fcn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X(n)"
+	  SrcPort		  1
+	  DstBlock		  "Selector"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "X(n)_"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "D(n)"
+	  SrcPort		  1
+	  DstBlock		  "Selector1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "D(n)]_"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Add"
+      SrcPort		      1
+      Points		      [0, 0; -65, 0]
+      Branch {
+	DstBlock		"Backpropagation Algorithm"
+	DstPort			4
+      }
+      Branch {
+	Points			[0, 80]
+	DstBlock		"MSE"
+	DstPort			1
+      }
+    }
+    Line {
+      Labels		      [2, 0]
+      SrcBlock		      "MLP - 2 Layers"
+      SrcPort		      2
+      Points		      [60, 0; 0, 125]
+      DstBlock		      "Backpropagation Algorithm"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "MLP - 2 Layers"
+      SrcPort		      3
+      Points		      [30, 0; 0, 60]
+      DstBlock		      "Backpropagation Algorithm"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "MLP - 2 Layers"
+      SrcPort		      1
+      Points		      [200, 0; 0, 155]
+      Branch {
+	DstBlock		"outpu MLP"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 35]
+	Branch {
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "Backpropagation Algorithm"
+	  DstPort		  3
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "MSE"
+      SrcPort		      1
+      Points		      [0, 0; 45, 0]
+      Branch {
+	DstBlock		"MSE Value"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -55]
+	DstBlock		"MSE View"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Backpropagation Algorithm"
+      SrcPort		      1
+      Points		      [-15, 0; 0, -80]
+      DstBlock		      "MLP - 2 Layers"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Backpropagation Algorithm"
+      SrcPort		      2
+      Points		      [-40, 0; 0, -180]
+      DstBlock		      "MLP - 2 Layers"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "shuffle"
+      SrcPort		      1
+      DstBlock		      "MLP - 2 Layers"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Input"
+      SrcPort		      1
+      DstBlock		      "shuffle"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "desired output value"
+      SrcPort		      1
+      Points		      [30, 0; 0, -60]
+      DstBlock		      "shuffle"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "shuffle"
+      SrcPort		      2
+      Points		      [20, 0; 0, 305]
+      Branch {
+	Points			[0, 40; 720, 0; 0, -150]
+	DstBlock		"Add"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"MLP desired output"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Name		      "XOR Example - Batch-Mode Training"
+      Position		      [258, 46]
+      FontName		      "Arial"
+      FontSize		      20
+    }
+  }
+}
